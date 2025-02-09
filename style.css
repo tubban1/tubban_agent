@@ -1,0 +1,589 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 导航栏样式 */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 2rem;
+}
+
+.logo img {
+    display: block;
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+/* 英雄区域样式更新 */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: white;
+    padding: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 移除之前的 hero-image 相关样式 */
+.hero-image {
+    display: none;
+}
+
+/* 部分通用样式 */
+section {
+    padding: 4rem 2rem;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* 服务卡片样式 */
+.services-grid, .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem;
+    background: #f5f5f5;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.service-features li {
+    color: #4CAF50;
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-features li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+/* 服务部分标题样式 */
+#services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* 案例研究标题居中 */
+#cases h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* 案例卡片内容居中 */
+.case-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.case-content {
+    padding: 1.5rem;
+}
+
+.case-overview {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.case-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.case-card h3 {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin: 1rem 1.5rem;
+}
+
+/* 更新案例图片样式 */
+.case-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 联系表单样式 */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background: #45a049;
+}
+
+#contact-form button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+/* 添加表单验证样式 */
+#contact-form input:invalid,
+#contact-form textarea:invalid {
+    border-color: #ff6b6b;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* 联系我们区域样式更新 */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+}
+
+.contact-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-decoration {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.contact-decoration:hover {
+    transform: scale(1.02);
+}
+
+/* 联系我们区域样式更新 */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.email-link {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    color: #45a049;
+}
+
+.contact-description {
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* 页脚样式 */
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.footer-logo {
+    height: 30px;
+    width: auto;
+}
+
+/* 社交图标样式更新 */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.social-icons img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); /* 确保图标是白色的 */
+    opacity: 1; /* 确保图标可见 */
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 移动端响应式设计 */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .service-card {
+        padding: 2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .service-features {
+        font-size: 0.9rem;
+    }
+
+    .case-image {
+        height: 200px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-image {
+        order: -1;
+        max-width: 300px;
+    }
+
+    .contact-decoration {
+        height: 200px;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #333;
+        margin: 5px 0;
+    }
+    
+    nav a {
+        display: none;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .contact-info {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .email-link {
+        font-size: 1.2rem;
+    }
+
+    .case-content {
+        padding: 1rem;
+    }
+    
+    .case-card h3 {
+        font-size: 1.2rem;
+        margin: 0.8rem 1rem;
+    }
+    
+    .case-overview {
+        font-size: 0.9rem;
+    }
+    
+    .case-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* 移除之前的图片加载状态样式 */
+img.loaded {
+    opacity: 1;
+}
+
+/* 更新案例网格布局 */
+.cases-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+/* 更新图表容器样式 */
+.case-diagram {
+    margin: 2rem auto 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow-x: auto;
+    max-width: 800px;
+}
+
+.case-diagram .mermaid {
+    display: flex;
+    justify-content: center;
+    min-width: 600px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .case-card {
+        margin: 0 1rem 2rem;
+    }
+    
+    #cases h2 {
+        margin-bottom: 2rem;
+    }
+    
+    .cases-grid {
+        gap: 2rem;
+    }
+}
+
+/* 服务图标样式更新 */
+.service-icon {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .service-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Contact Us 标题和内容居中 */
+#contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    align-items: center;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.contact-description {
+    color: #666;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+} 

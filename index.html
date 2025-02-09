@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swiss AI Agent Services">
+    <title>Tubban Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Tubban Agent Logo" width="120" height="40">
+            </div>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#cases">Case Studies</a>
+            <a href="#contact">Contact</a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Tubban AI Agent</h1>
+            <p>Intelligent Agent Solutions</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="images/ai-strategy.jpg" alt="Agentic AI Strategy" class="service-icon">
+                <h3>Agentic AI Strategy</h3>
+                <p>Strategic consulting for AI agent integration in business processes. We help organizations design and implement autonomous AI systems that align with their objectives and values.</p>
+                <ul class="service-features">
+                    <li>AI Readiness Assessment</li>
+                    <li>Agent Architecture Design</li>
+                    <li>Implementation Roadmap</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img src="images/ai-development.jpg" alt="AI Agent Development" class="service-icon">
+                <h3>AI Agent Development</h3>
+                <p>Custom development of intelligent AI agents tailored to your specific needs. We build autonomous systems that can understand, learn, and act in complex environments.</p>
+                <ul class="service-features">
+                    <li>Custom Agent Development</li>
+                    <li>Multi-Agent Systems</li>
+                    <li>Integration Services</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases">
+        <h2>Success Cases</h2>
+        <div class="cases-grid">
+            <div class="case-card">
+                <img src="images/ai-conversation.jpg" alt="AI Conversation" class="case-image">
+                <h3>AI-Powered Deep Conversations</h3>
+                <div class="case-content">
+                    <p class="case-overview">At Tubban AI Agent, we developed an innovative AI workflow that enables two AI language models to engage in a long, deep conversation based on user-defined topics and conversation styles.</p>
+                    <p class="case-description">This approach enhances the quality of AI-driven discussions, making them more engaging, insightful, and adaptable to various applications.</p>
+                    <div class="case-diagram">
+                        <div class="mermaid">
+                            graph LR
+                            A[User Input: Topic + Style] -->|Sends Input| B[Model A: Initiator]
+                            B -->|Generates Opening Statement| C[Model B: Responder]
+                            C -->|Returns Deep Response| B
+                            B -.->|User Intervention Possible| A
+                            C -->|Outputs Final Conversation| D[User]
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="case-card">
+                <img src="images/case-study-2.jpg" alt="Case Study 2" class="case-image">
+                <h3>Case Study 2</h3>
+                <p>Project Showcase</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in touch</h3>
+                <p>We'd love to hear from you. Please email us at:</p>
+                <a href="mailto:info@tubban.com" class="email-link">info@tubban.com</a>
+                <p class="contact-description">
+                    Our team will respond to your inquiry within 24 hours.
+                </p>
+            </div>
+            <div class="contact-image">
+                <img src="images/contact-us.jpg" alt="Contact Us" class="contact-decoration">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <img src="images/logo.png" alt="Tubban Agent Logo" class="footer-logo">
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEYSURBVEiJ7ZU9SwNBEIafN3cWooVYiCBoYWMn/gQbCwtBxNbGwkLsLAQrwV/gH7EQBBEsFBHExkYQRFQQRBAUBBXR5HQtklsuH0eM3NVNM8vO+z7s7syyEEURf6lMpVXuEZjZLjAHjFhrz8xsEZgHxoEboN3zvBvP8x6BXSAE7tI0vQJ2gCGgC7RyBEVgGqgAj8A4EDjnTtM0XQcws3XgABgFesAH0CwQVIF94N7MDoEFYNTMDoAGUANQSqkBB0ALmAGQUsrk1kRKqQNMAgvAE9AAXoCmtfabIKWUBSrAG/CctdbJVZTnYkQptQu8W2vPzWwZWALGgFvgDjjJE/wXf/4OvhJ8F9XKwEeapnc/OXgPXP5Gw7fzCSS6z3ayHfffAAAAAElFTkSuQmCC" alt="LinkedIn">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGESURBVEiJpZY9TsNAEIXfzPqHFCQkp4gE4gA0VEhIFJwBGo7CEaiQKKBBnAFxAA5AQYEEBRISEgUNP4nXw1ZsJ7uOYxPeU3l25/tmZ71jC0QEIcQOgFMAJwD2AWwD2ADQAvAJ4B3AK4AXAE+e5z2nabpkAAARbQI4B3DgnPOVUlOlVAyAiEgQkSQiISKxUipWSmVKqR/n3DWAMwDbYRh+MADXAKZEFBORJCJJRCXrWq+JKHHOXQVBMNcADgFMiCgWQiRCiNVmvRBRTETzIAjONYAJEUVCiNgYs9Z6Y0wihJgT0ZEGcAFgSkSxMSYxxqy13hiTGGPmRHQJAMYYswfgBMCciOZKqdQYs9Z6pVRqjImcc0daa30C4JOIYmvtWhFYaxNrbaSUutFa6zDLsm8AL0qpVGudrkKgtU6VUi9Zln0xxnwAeNda37fb7XsAj4yxewAP3vvnTqdzB+AOwKj6bVYFY8xwOBw+AXgG8AYgAvAF4A3AyHs/6na7dwCw2+3+/gN/xS+e52Qy5XX/YQAAAABJRU5ErkJggg==" alt="Twitter">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEbSURBVEiJ7ZUxTsNAEEXfzNoWqUCiQhQ0SBwAKhoKJCQuQMMRcgSOwBE4ABIFBQUVEhIFDQUNPymy9VPYjrNOYjsNVvOkKXZn5/15Z9YjqsqStoKFq5rZGbAPbItIBawBPaAGPoBX4EVVn4wxL8aYJ+AeqIB3Y8wNcAcMgBr4XiBoAxvAEHgDVoHUWnturb0AUNVL4AHoAw3wBYwWCIbAPXBvjLkF9oC+qt4Ax8AQWAEQEekAx0AFbAMiIpIstSYiIh1gDdgFPoExMAGmqvpDkIhIDawCn8BEVTVxFfm5GBGRe+BTVa9UdR84AAZAA7wBj0kC4D9/8B18J/gpqnWBn7quJ785+ACe/6LhbPsBfETPvFJvGXwAAAAASUVORK5CYII=" alt="Facebook">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
