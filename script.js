@@ -14,10 +14,29 @@ function updateMetaTags(section) {
         `Swiss AI Agent ${section} Services`;
 }
 
-// 移动端菜单切换
-document.querySelector('.hamburger').addEventListener('click', () => {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
+// 移动端菜单处理
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+
+// 点击菜单项后关闭菜单
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+
+// 点击页面其他区域关闭菜单
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-container')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
 });
 
 // 初始化 EmailJS
