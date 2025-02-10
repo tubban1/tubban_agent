@@ -114,8 +114,14 @@
                 <img src="images/ai-conversation.jpg" alt="AI Conversation" class="case-image">
                 <h3>AI-Powered Deep Conversations</h3>
                 <div class="case-content">
-                    <p class="case-overview">At Tubban AI Agent, we developed an innovative AI workflow that enables two AI language models to engage in a long, deep conversation based on user-defined topics and conversation styles.</p>
-                    <p class="case-description">This approach enhances the quality of AI-driven discussions, making them more engaging, insightful, and adaptable to various applications.</p>
+                    <p class="case-overview">At Tubban AI Agent, we developed an innovative AI workflow that enables two AI language models to engage in sophisticated business negotiations and strategic discussions.</p>
+                    <p class="case-description">Our AI agents can simulate complex business scenarios, from international trade negotiations to strategic partnerships, helping Swiss businesses prepare for real-world challenges. This technology enables companies to:</p>
+                    <ul class="case-benefits">
+                        <li>Practice and refine negotiation strategies</li>
+                        <li>Understand different cultural and business perspectives</li>
+                        <li>Analyze potential business scenarios and outcomes</li>
+                        <li>Train teams in international business communication</li>
+                    </ul>
                     <div class="case-diagram">
                         <div class="mermaid">
                             graph LR
@@ -124,6 +130,18 @@
                             C -->|Returns Deep Response| B
                             B -.->|User Intervention Possible| A
                             C -->|Outputs Final Conversation| D[User]
+                        </div>
+                    </div>
+                    
+                    <div class="conversation-demo">
+                        <h4>Live Demo: International Trade Negotiation</h4>
+                        <div class="conversation-container">
+                            <div class="conversation-header">
+                                <button id="startDemo" class="demo-button">Start Demo</button>
+                                <button id="resetDemo" class="demo-button" style="display: none;">Reset Demo</button>
+                            </div>
+                            <div class="conversation-opening"></div>
+                            <div class="conversation-stream"></div>
                         </div>
                     </div>
                 </div>
@@ -166,5 +184,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <audio id="typeSound" preload="auto">
+        <source src="https://www.soundjay.com/mechanical/sounds/typewriter-key-1.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="returnSound" preload="auto">
+        <source src="https://www.soundjay.com/mechanical/sounds/typewriter-return-1.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html> 

@@ -874,4 +874,176 @@ img.loaded {
         width: 100%;
         object-fit: cover;
     }
+}
+
+/* 案例效益列表样式 */
+.case-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.case-benefits li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #2c3e50;
+}
+
+.case-benefits li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+/* 对话演示容器样式 */
+.conversation-demo {
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+}
+
+.conversation-demo h4 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.conversation-container {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.conversation-opening {
+    color: #63b3ed;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.conversation-stream {
+    color: #48bb78;
+}
+
+.conversation-stream .us {
+    color: #f6ad55;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+}
+
+.conversation-stream .china {
+    color: #4299e1;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+}
+
+/* 打字机效果的光标 */
+.typing::after {
+    content: '|';
+    animation: cursor 1s infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* 滚动条样式 */
+.conversation-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.conversation-container::-webkit-scrollbar-track {
+    background: #2d3748;
+}
+
+.conversation-container::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 4px;
+}
+
+.conversation-container::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
+
+/* 对话演示按钮样式 */
+.conversation-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.demo-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.demo-button:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+.demo-button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 更新对话容器样式 */
+.conversation-container {
+    background: #1e1e1e;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-height: 500px;
+    overflow-y: auto;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.conversation-opening, .conversation-stream {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.conversation-opening.visible, .conversation-stream.visible {
+    opacity: 1;
+}
+
+/* 音频控制按钮样式 */
+.sound-control {
+    padding: 0.5rem 1rem !important;
+    min-width: 44px;
+}
+
+.sound-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* 更新按钮容器样式 */
+.conversation-header {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 } 
