@@ -158,23 +158,26 @@ h1, h2, h3 {
     margin-bottom: 3rem;
 }
 
-/* 案例卡片内容居中 */
+/* 更新案例卡片的响应式样式 */
 .case-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    max-width: 800px;
-    margin: 0 auto 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.case-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .case-content {
-    padding: 1.5rem;
+    padding: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .case-overview {
@@ -193,15 +196,116 @@ h1, h2, h3 {
 .case-card h3 {
     color: #2c3e50;
     font-size: 1.4rem;
-    margin: 1rem 1.5rem;
+    margin: 1rem 0;
+    word-wrap: break-word;
 }
 
-/* 更新案例图片样式 */
-.case-image {
+/* 对话演示容器的响应式样式 */
+.conversation-container {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px 8px 0 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 添加媒体查询以适应移动设备 */
+@media screen and (max-width: 768px) {
+    .case-content {
+        padding: 1.5rem;
+    }
+    
+    .case-overview,
+    .case-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+    
+    .case-benefits {
+        margin: 1rem 0;
+        padding-left: 0;
+    }
+    
+    .case-benefits li {
+        font-size: 0.9rem;
+        padding: 0.4rem 0 0.4rem 1.5rem;
+        line-height: 1.4;
+    }
+    
+    .case-diagram {
+        margin: 1.5rem -1.5rem;
+        padding: 0 1.5rem;
+    }
+    
+    .mermaid {
+        font-size: 12px;
+    }
+    
+    .conversation-demo {
+        margin-top: 2rem;
+    }
+    
+    .conversation-demo h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .conversation-container {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* 添加更小屏幕的样式 */
+@media screen and (max-width: 480px) {
+    .case-content {
+        padding: 1rem;
+    }
+    
+    .case-overview,
+    .case-description {
+        font-size: 0.85rem;
+    }
+    
+    .case-benefits li {
+        font-size: 0.85rem;
+        padding: 0.3rem 0 0.3rem 1.2rem;
+    }
+    
+    .case-diagram {
+        margin: 1rem -1rem;
+        padding: 0 1rem;
+    }
+    
+    .conversation-demo h4 {
+        font-size: 1rem;
+    }
+    
+    .conversation-container {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* 确保图表在移动端可以水平滚动 */
+.mermaid svg {
+    height: auto !important;
+    width: auto !important;
+    min-width: 100%;
+}
+
+/* 优化文本容器 */
+.case-overview,
+.case-description,
+.case-benefits {
+    max-width: 100%;
+    word-break: break-word;
+}
+
+/* 优化标题样式 */
+.case-card h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    word-wrap: break-word;
 }
 
 /* 联系表单样式 */
@@ -495,18 +599,15 @@ img.loaded {
 
 /* 更新图表容器样式 */
 .case-diagram {
-    margin: 2rem auto 0;
-    padding: 1.5rem;
-    background: #f8f9fa;
-    border-radius: 8px;
+    width: 100%;
     overflow-x: auto;
-    max-width: 800px;
+    -webkit-overflow-scrolling: touch;
+    margin: 2rem 0;
 }
 
-.case-diagram .mermaid {
-    display: flex;
-    justify-content: center;
-    min-width: 600px;
+.mermaid {
+    min-width: 300px;
+    width: 100%;
 }
 
 /* 移动端适配 */
@@ -911,17 +1012,6 @@ img.loaded {
     font-size: 1.2rem;
 }
 
-.conversation-container {
-    background: #1e1e1e;
-    border-radius: 8px;
-    padding: 1.5rem;
-    max-height: 400px;
-    overflow-y: auto;
-    font-family: 'Consolas', monospace;
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
 .conversation-opening {
     color: #63b3ed;
     margin-bottom: 1.5rem;
@@ -1046,4 +1136,5 @@ img.loaded {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+} 
 } 
