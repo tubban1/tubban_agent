@@ -1,5 +1,5 @@
 // 在文件顶部添加音效（使用短的 Base64 编码音频数据）
-const typeSound = new Audio("data:audio/wav;base64,UklGRnQGAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YU8GAACBgIF/gn2Dfn+BgoGDgYOChISChYOHgoWDhISFhYaGhoeHhoeGhoaFhYaGh4iJiYqKiouKiouKiYmIiYmKioqLioqJiYiHh4aGhYaGh4iIiYiIiImIiYmJiomJiImHhYSCgYB/f4CBgoOFhoaHh4iHiIeHhoaFhYSEg4OCgoGBgoKDhISFhoWGhYWEg4KBgL+/v8DAwMHBwcLCwsLCwcHAwL++vr29vb6+v8DBwcLDw8PDw8LCwcDAv7++vr2+vsDBwsPExMXFxcTDw8LBwL++vby8vL2+v8DCw8TFxsbGxcXDwsHAvr27urq6u7y9v8HDxcbHyMjIx8bFw8LAvry6ubi4ubq8vsHDxcfIycnJyMfGxMPBv727ubi3t7i6vL7BwsTGyMnJycjHxcTCwL68ure2tra3ubq9v8LExt/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/fv7y5trSzsrKys7S2uLq9v8LEx8nKy8vLysnIxsXCwL27ubi3t7i5ur2/wcTFx8nJycjHxsXDwcC+vLm4t7a3uLm7vsDCxMbHycnIyMbFw8LAvry5uLe2tre4ur2/wcPFxsfIyMfGxcTCwL+9u7m4t7e3uLq8vsDCxMbHyMjIx8bFw8HAvry6uLe3t7i5u72/wcPFxsfIyMfGxcPCwL69u7m4t7e3uLm7vb/BwsTGx8jIx8bFxMLAvr26uLe3t7i5u72+wMLExcfHyMfGxcTCwL+9u7m4t7e3uLm7vb/BwsTGx8fHxsXEw8HAvry6uLe3t7i5u72/wcPExsfHx8bFxMLBv768uri3t7e4ubu9v8DCxMXGx8fGxcTDwcC+vLq4t7e3uLm7vb7AwsTFxsbHxsXEw8HAvry6ubi3t7i5u72+wMLDxcbGxsXFw8LBv768uri3t7i4ubu9vsHCw8XGxsbFxMPCwL+9u7m4t7e4uLq8vb/BwsTFxcbFxcTDwcC/vby6uLe3uLi5u72/wMPExcXFxcTDwsHAv727uri3t7i4uru9v8DCxMXFxcXEw8LBwL69u7m4t7e4uLq7vb7AwsTExcXExMPCwcC+vbu5uLe3uLi6u72+wMHDxMXFxMTDwsHAv727ubm3t7i4uru9vsDCw8TExMTDwsLBwL69u7m4uLe4uLq7vb7AwcPDxMTEw8PCwcC/vry6ubi3uLi5u72+v8HDw8TExMPDwsHAv768uri4t7i4uru8vr/Bw8PExMPDwsLBwL++vLq5uLi4uLm7vL6/wcLDw8PDw8PCwcDAv726ubm4uLi4uru8vr/AwsPDw8PDwsLBwL++vbu5uLi4uLm6vL2/wMLCw8PDw8LCwcDAv727ubm4uLi5uru8vr/AwsLDw8PCwsHBwL+9vLq5uLi4uLm6vL2+wMHCwsPDwsLCwcDAv728urm4uLi4ubq8vb7AwcLCwsLCwsHBwL+/vby6ubm4uLi5ury9vr/BwcLCwsLCwcHAwL+9vLq5ubi4uLm6u72+v8DBwcLCwsHBwcC/v728urm5uLi4ubq7vb6/wMHBwsLCwcHBwL+/vby6ubm4uLi5uru9vr/AwcHBwcHBwcHAv7+9vLq5ubi4uLm6u72+v8DBwcHBwcHAwMC/v728urm5uLi4ubq7vb6/wMDBwcHBwcDAwL+/vby6ubm4uLi5uru8vb6/wMDBwcHBwMDAv7+9vLq5ubi4uLm6u7y9vr/AwMHBwcHAwMC/v729urm5uLi4ubq7vL2+v8DAwMHBwMDAwL+/vby6ubm4uLi5uru8vb6/wMDAwMDAwMC/v7+9vLq5ubi4uLm6u7y9vr+/wMDAwMDAwL+/v728urm5uLi4ubq7vL2+v7/AwMDAwMDAv7+/vby6ubm4uLi5uru8vb6/v8DAwMDAwL+/v7+9vLq5ubi4uLm6u7y9vr6/v8DAwMDAv7+/v728urm5uLi4ubq7vL29vr+/wMDAwL+/v7+/vby6ubm4uLi5uru8vb2+v7/AwMC/v7+/v729urm5uLi4ubq7vL29vr+/v8DAv7+/v7+9vLq5ubi4uLm6u7y9vb6/v7/AwL+/v7+/vby6ubm4uLi5uru8vb2+v7+/v7+/v7+/v728urm5uLi4ubq7vL29vr+/v7+/v7+/v7+9vLq5ubi4uLm6u7y9vb6/v7+/v7+/v7+/vby6ubm4uLi5uru7vL2+v7+/v7+/v7+/v729urm5uLi4ubq7vL29vr+/v7+/v7+/v7+9vLq5ubi4uLm6u7y9vb6/v7+/v7+/v7+/vby6ubm4uA==");
+const typeSound = new Audio("data:audio/wav;base64,UklGRnQGAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YU8GAACBgIF/gn2Dfn+BgoGDgYOChISChYOHgoWDhISFhYaGhoeHhoeGhoaFhYaGh4iJiYqKiouKiouKiYmIiYmKioqLioqJiYiHh4aGhYaGh4iIiYiIiImIiYmJiomJiImHhYSCgYB/f4CBgoOFhoaHh4iHiIeHhoaFhYSEg4OCgoGBgoKDhISFhoWGhYWEg4KBgL+/v8DAwMHBwcLCwsLCwcHAwL++vr29vb6+v8DBwcLDw8PDw8LCwcDAv7++vr2+vsDBwsPExMXFxcTDw8LBwL++vby8vL2+v8DCw8TFxsbGxcXDwsHAvr27urq6u7y9v8HDxcbHyMjIx8bFw8LAvry6ubi4ubq8vsHDxcfIycnJyMfGxMPBv727ubi3t7i6vL7BwsTGyMnJycjHxcTCwL68ure2tra3ubq9v8LExt/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/fv7y5trSzsrKys7S2uLq9v8LEx8nKy8vLysnIxsXCwL27ubi3t7i5ur2/wcTFx8nJycjHxsXDwcC+vLm4t7a3uLm7vsDCxMbHycnIyMbFw8LAvry5uLe2tre4ur2/wcPFxsfIyMfGxcTCwL+9u7m4t7e3uLq8vsDCxMbHyMjIx8bFw8HAvry6uLe3t7i5u72/wcPFxsfIyMfGxcPCwL69u7m4t7e3uLm7vb/BwsTGx8jIx8bFxMLAvr26uLe3t7i5u72+wMLExcfHyMfGxcTCwL+9u7m4t7e3uLm7vb/BwsTGx8fHxsXEw8HAvry6uLe3t7i5u72/wcPExsfHx8bFxMLBv768uri3t7e4ubu9v8DCxMXGx8fGxcTDwcC+vLq4t7e3uLm7vb7AwsTFxsbHxsXEw8HAvry6ubi3t7i5u72+wMLDxcbGxsXFw8LBv768uri3t7i4ubu9vsHCw8XGxsbFxMPCwL+9u7m4t7e4uLq8vb/BwsTFxcbFxcTDwcC/vby6uLe3uLi5u72/wMPExcXFxcTDwsHAv727uri3t7i4uru9v8DCxMXFxcXEw8LBwL69u7m4t7e4uLq7vb7AwsTExcXExMPCwcC+vbu5uLe3uLi6u72+wMHDxMXFxMTDwsHAv727ubm3t7i4uru9vsDCw8TExMTDwsLBwL69u7m4uLe4uLq7vb7AwcPDxMTEw8PCwcC/vry6ubi3uLi5u72+v8HDw8TExMPDwsHAv768uri4t7i4uru8vr/Bw8PExMPDwsLBwL++vLq5uLi4uLm7vL6/wcLDw8PDw8PCwcDAv726ubm4uLi4uru8vr/AwsPDw8PDwsLBwL++vbu5uLi4uLm6vL2/wMLCw8PDw8LCwcDAv727ubm4uLi5uru8vr/AwsLDw8PCwsHBwL+9vLq5uLi4uLm6vL2+wMHCwsPDwsLCwcDAv728urm4uLi4ubq8vb7AwcLCwsLCwsHBwL+/vby6ubm4uLi5ury9vr/BwcLCwsLCwcHAwL+9vLq5ubi4uLm6u72+v8DBwcLCwsHBwcC/v728urm5uLi4ubq7vb6/wMHBwsLCwcHBwL+/vby6ubm4uLi5uru9vr/AwcHBwcHBwcHAv7+9vLq5ubi4uLm6u72+v8DBwcHBwcHAwMC/v728urm5uLi4ubq7vb6/wMDBwcHBwcDAwL+/vby6ubm4uLi5uru8vb6/wMDBwcHBwMDAv7+9vLq5ubi4uLm6u7y9vr/AwMHBwcHAwMC/v729urm5uLi4ubq7vL2+v8DAwMHBwMDAwL+/vby6ubm4uLi5uru8vb6/wMDAwMDAwMC/v7+9vLq5ubi4uLm6u7y9vr+/wMDAwMDAwL+/v728urm5uLi4ubq7vL2+v7/AwMDAwMDAv7+/vby6ubm4uLi5uru8vb6/v8DAwMDAwL+/v7+9vLq5ubi4uLm6u7y9vr6/v8DAwMDAv7+/v728urm5uLi4ubq7vL29vr+/wMDAwL+/v7+/vby6ubm4uLi5uru8vb2+v7/AwMC/v7+/v729urm5uLi4ubq7vL29vr+/v8DAv7+/v7+9vLq5ubi4uLm6u7y9vb6/v7/AwL+/v7+/vby6ubm4uLi5uru8vb2+v7+/v7+/v7+/v728urm5uLi4ubq7vL29vr+/v7+/v7+/v7+9vLq5ubi4uLm6u7y9vb6/v7+/v7+/v7+/vby6ubm4uA==");
 const returnSound = new Audio("data:audio/wav;base64,UklGRnQGAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YU8GAACBgIF/gn2Dfn+BgoGDgYOChISChYOHgoWDhISFhYaGhoeHhoeGhoaFhYaGh4iJiYqKiouKiouKiYmIiYmKioqLioqJiYiHh4aGhYaGh4iIiYiIiImIiYmJiomJiImHhYSCgYB/f4CBgoOFhoaHh4iHiIeHhoaFhYSEg4OCgoGBgoKDhISFhoWGhYWEg4KBgL+/v8DAwMHBwcLCwsLCwcHAwL++vr29vb6+v8DBwcLDw8PDw8LCwcDAv7++vr2+vsDBwsPExMXFxcTDw8LBwL++vby8vL2+v8DCw8TFxsbGxcXDwsHAvr27urq6u7y9v8HDxcbHyMjIx8bFw8LAvry6ubi4ubq8vsHDxcfIycnJyMfGxMPBv727ubi3t7i6vL7BwsTGyMnJycjHxcTCwL68ure2tra3ubq9v8LExt/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/fv7y5trSzsrKys7S2uLq9v8LEx8nKy8vLysnIxsXCwL27ubi3t7i5ur2/wcTFx8nJycjHxsXDwcC+vLm4t7a3uLm7vsDCxMbHycnIyMbFw8LAvry5uLe2tre4ur2/wcPFxsfIyMfGxcTCwL+9u7m4t7e3uLq8vsDCxMbHyMjIx8bFw8HAvry6uLe3t7i5u72/wcPFxsfIyMfGxcPCwL69u7m4t7e3uLm7vb/BwsTGx8jIx8bFxMLAvr26uLe3t7i5u72+wMLExcfHyMfGxcTCwL+9u7m4t7e3uLm7vb/BwsTGx8fHxsXEw8HAvry6uLe3t7i5u72/wcPExsfHx8bFxMLBv768uri3t7e4ubu9v8DCxMXGx8fGxcTDwcC+vLq4t7e3uLm7vb7AwsTFxsbHxsXEw8HAvry6ubi3t7i5u72+wMLDxcbGxsXFw8LBv768uri3t7i4ubu9vsHCw8XGxsbFxMPCwL+9u7m4t7e4uLq8vb/BwsTFxcbFxcTDwcC/vby6uLe3uLi5u72/wMPExcXFxcTDwsHAv727uri3t7i4uru9v8DCxMXFxcXEw8LBwL69u7m4t7e4uLq7vb7AwsTExcXExMPCwcC+vbu5uLe3uLi6u72+wMHDxMXFxMTDwsHAv727ubm3t7i4uru9vsDCw8TExMTDwsLBwL69u7m4uLe4uLq7vb7AwcPDxMTEw8PCwcC/vry6ubi3uLi5u72+v8HDw8TExMPDwsHAv768uri4t7i4uru8vr/Bw8PExMPDwsLBwL++vLq5uLi4uLm7vL6/wcLDw8PDw8PCwcDAv726ubm4uLi4uru8vr/AwsPDw8PDwsLBwL++vbu5uLi4uLm6vL2/wMLCw8PDw8LCwcDAv727ubm4uLi5uru8vr/AwsLDw8PCwsHBwL+9vLq5uLi4uLm6vL2+wMHCwsPDwsLCwcDAv728urm4uLi4ubq8vb7AwcLCwsLCwsHBwL+/vby6ubm4uLi5ury9vr/BwcLCwsLCwcHAwL+9vLq5ubi4uLm6u72+v8DBwcLCwsHBwcC/v728urm5uLi4ubq7vb6/wMHBwsLCwcHBwL+/vby6ubm4uLi5uru9vr/AwcHBwcHBwcHAv7+9vLq5ubi4uLm6u72+v8DBwcHBwcHAwMC/v728urm5uLi4ubq7vb6/wMDBwcHBwcDAwL+/vby6ubm4uLi5uru8vb6/wMDBwcHBwMDAv7+9vLq5ubi4uLm6u7y9vr/AwMHBwcHAwMC/v729urm5uLi4ubq7vL2+v8DAwMHBwMDAwL+/vby6ubm4uLi5uru8vb6/wMDAwMDAwMC/v7+9vLq5ubi4uLm6u7y9vr+/wMDAwMDAwL+/v728urm5uLi4ubq7vL2+v7/AwMDAwMDAv7+/vby6ubm4uLi5uru8vb6/v8DAwMDAwL+/v7+9vLq5ubi4uLm6u7y9vr6/v8DAwMDAv7+/v728urm5uLi4ubq7vL29vr+/wMDAwL+/v7+/vby6ubm4uLi5uru8vb2+v7/AwMC/v7+/v729urm5uLi4ubq7vL29vr+/v8DAv7+/v7+9vLq5ubi4uLm6u7y9vb6/v7/AwL+/v7+/vby6ubm4uLi5uru8vb2+v7+/v7+/v7+/v728urm5uLi4ubq7vL29vr+/v7+/v7+/v7+9vLq5ubi4uLm6u7y9vb6/v7+/v7+/v7+/vby6ubm4uA==");
 
 // 设置音量
@@ -132,6 +132,131 @@ function resetDemo() {
     resetButton.style.display = 'none';
 }
 
+// 在文件最顶部定义语言配置和当前语言
+const i18n = {
+    en: {
+        nav: {
+            home: "Home",
+            services: "Services",
+            cases: "Case Studies",
+            swiss: "Swiss Market",
+            contact: "Contact"
+        },
+        hero: {
+            title: "Tubban AI Agent",
+            subtitle: "Empowering Swiss Businesses with Intelligent Agents",
+            focus: "Autonomous AI Solutions Tailored for Swiss Excellence"
+        },
+        services: {
+            title: "Our Services"
+        }
+    },
+    de: {
+        nav: {
+            home: "Startseite",
+            services: "Dienstleistungen",
+            cases: "Fallstudien",
+            swiss: "Schweizer Markt",
+            contact: "Kontakt"
+        },
+        hero: {
+            title: "Tubban AI Agent",
+            subtitle: "Stärkung Schweizer Unternehmen mit intelligenten Agenten",
+            focus: "Autonome KI-Lösungen maßgeschneidert für Schweizer Exzellenz"
+        },
+        services: {
+            title: "Unsere Dienstleistungen"
+        }
+    },
+    fr: {
+        nav: {
+            home: "Accueil",
+            services: "Services",
+            cases: "Études de cas",
+            swiss: "Marché Suisse",
+            contact: "Contact"
+        },
+        hero: {
+            title: "Tubban AI Agent",
+            subtitle: "Autonomisation des entreprises suisses avec des agents intelligents",
+            focus: "Solutions IA autonomes sur mesure pour l'excellence suisse"
+        },
+        services: {
+            title: "Nos Services"
+        }
+    },
+    it: {
+        nav: {
+            home: "Home",
+            services: "Servizi",
+            cases: "Casi Studio",
+            swiss: "Mercato Svizzero",
+            contact: "Contatto"
+        },
+        hero: {
+            title: "Tubban AI Agent",
+            subtitle: "Potenziare le imprese svizzere con agenti intelligenti",
+            focus: "Soluzioni IA autonome su misura per l'eccellenza svizzera"
+        },
+        services: {
+            title: "I Nostri Servizi"
+        }
+    }
+};
+
+let currentLang = 'en';
+
+// 更新页面文本
+function updateContent(lang) {
+    console.log('Updating content to language:', lang);
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const keys = element.getAttribute('data-i18n').split('.');
+        let value = i18n[lang];
+        try {
+            for (const key of keys) {
+                value = value[key];
+            }
+            if (value) {
+                element.textContent = value;
+            }
+        } catch (error) {
+            console.warn(`Translation missing for key: ${keys.join('.')} in language: ${lang}`);
+        }
+    });
+}
+
+// 语言切换处理
+function switchLanguage(lang) {
+    console.log('Switching to language:', lang);
+    currentLang = lang;
+    
+    // 更新按钮状态
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    
+    // 更新页面内容
+    updateContent(lang);
+}
+
+// 初始化语言切换功能
+function initLanguageSwitcher() {
+    console.log('Initializing language switcher...');
+    const buttons = document.querySelectorAll('.lang-btn');
+    
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const lang = btn.dataset.lang;
+            console.log('Language button clicked:', lang);
+            switchLanguage(lang);
+        });
+    });
+    
+    // 初始化页面内容
+    updateContent(currentLang);
+}
+
 // 等待 DOM 加载完成后执行所有初始化代码
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM Content Loaded');
@@ -201,6 +326,9 @@ document.addEventListener('DOMContentLoaded', () => {
             img.classList.add('loaded');
         }
     });
+
+    // 初始化语言切换功能
+    initLanguageSwitcher();
 });
 
 // 动态更新元标签

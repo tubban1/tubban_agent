@@ -27,15 +27,23 @@
 <body>
     <nav>
         <div class="nav-container">
-            <div class="logo">
-                <img src="images/logo.png" alt="Tubban Agent Logo" width="120" height="40">
+            <div class="left-nav">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Tubban Agent Logo" width="120" height="40">
+                </div>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="de">DE</button>
+                    <button class="lang-btn" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="it">IT</button>
+                </div>
             </div>
             <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#cases">Case Studies</a>
-                <a href="#swiss-market" class="nav-highlight">Swiss Market</a>
-                <a href="#contact">Contact</a>
+                <a href="#home" data-i18n="nav.home">Home</a>
+                <a href="#services" data-i18n="nav.services">Services</a>
+                <a href="#cases" data-i18n="nav.cases">Case Studies</a>
+                <a href="#swiss-market" class="nav-highlight" data-i18n="nav.swiss">Swiss Market</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </div>
             <div class="hamburger">
                 <span></span>
@@ -47,20 +55,14 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Tubban AI Agent</h1>
-            <p>Empowering Swiss Businesses with Intelligent Agents</p>
-            <p class="swiss-focus">Autonomous AI Solutions Tailored for Swiss Excellence</p>
-            <div class="language-options">
-                <span>Available in: </span>
-                <a href="/de">Deutsch</a> |
-                <a href="/fr">Français</a> |
-                <a href="/it">Italiano</a>
-            </div>
+            <h1 data-i18n="hero.title">Tubban AI Agent</h1>
+            <p data-i18n="hero.subtitle">Empowering Swiss Businesses with Intelligent Agents</p>
+            <p class="swiss-focus" data-i18n="hero.focus">Autonomous AI Solutions Tailored for Swiss Excellence</p>
         </div>
     </section>
 
     <section id="services">
-        <h2>Our Services</h2>
+        <h2 data-i18n="services.title">Our Services</h2>
         <div class="services-grid">
             <div class="service-card">
                 <img src="images/ai-strategy.jpg" alt="Agentic AI Strategy" class="service-icon">
