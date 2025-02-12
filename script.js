@@ -378,6 +378,18 @@ const i18n = {
 
 let currentLang = 'en';
 
+// 获取浏览器首选语言
+function getPreferredLanguage() {
+    // 获取浏览器语言设置
+    const browserLang = navigator.language || navigator.userLanguage;
+    // 获取语言代码的前两个字符（例如 'de-CH' -> 'de'）
+    const langCode = browserLang.split('-')[0];
+    
+    // 检查是否支持该语言，如果不支持则返回默认语言 'en'
+    const supportedLanguages = ['en', 'de', 'fr', 'it'];
+    return supportedLanguages.includes(langCode) ? langCode : 'en';
+}
+
 // 更新页面文本
 function updateContent(lang) {
     console.log('Updating content to language:', lang);
@@ -411,7 +423,7 @@ function switchLanguage(lang) {
     updateContent(lang);
 }
 
-// 修改后的 initLanguageSwitcher 函数（下拉框版，添加空值检查）
+// 修改后的 initLanguageSwitcher 函数
 function initLanguageSwitcher() {
     console.log('Initializing language switcher (dropdown)...');
     const langSelector = document.getElementById('language-selector');
@@ -420,6 +432,10 @@ function initLanguageSwitcher() {
         console.error("Cannot initialize language switcher: element with id 'language-selector' not found.");
         return;
     }
+    
+    // 获取并设置首选语言
+    currentLang = getPreferredLanguage();
+    console.log('Detected preferred language:', currentLang);
     
     // 设置下拉框默认选中当前语言
     langSelector.value = currentLang;
@@ -430,7 +446,7 @@ function initLanguageSwitcher() {
         switchLanguage(lang);
     });
     
-    // 初始化页面内容
+    // 初始化页面内容为检测到的语言
     updateContent(currentLang);
 }
 
