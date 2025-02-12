@@ -148,7 +148,74 @@ const i18n = {
             focus: "Autonomous AI Solutions Tailored for Swiss Excellence"
         },
         services: {
-            title: "Our Services"
+            title: "Our Services",
+            strategy: {
+                title: "Agentic AI Strategy",
+                description: "Transform your Swiss business with strategic AI agent integration. We develop autonomous systems that understand Swiss market dynamics, regulatory requirements, and multilingual communication needs."
+            },
+            development: {
+                title: "AI Agent Development",
+                description: "Custom AI agents built for Swiss business efficiency. Our solutions automate complex tasks while maintaining the high standards expected in the Swiss market."
+            },
+            swiss: {
+                title: "Swiss Market Excellence",
+                description: "Our AI agents are specifically designed to meet the unique demands of the Swiss market, combining precision, reliability, and innovation.",
+                features: [
+                    "Swiss Banking & Finance Integration",
+                    "Healthcare & Pharma Compliance",
+                    "Precision Industry Automation",
+                    "Multilingual Business Communication"
+                ],
+                benefits: {
+                    title: "Benefits for Swiss Businesses:",
+                    list: [
+                        "Reduce operational costs by up to 40%",
+                        "Enhance decision-making with AI-driven insights",
+                        "Automate complex multilingual communications",
+                        "Ensure compliance with Swiss regulations"
+                    ]
+                }
+            }
+        },
+        cases: {
+            title: "Success Cases",
+            deepConversations: {
+                title: "AI-Powered Deep Conversations",
+                overview: "At Tubban AI Agent, we developed an innovative AI workflow that enables two AI language models to engage in sophisticated business negotiations and strategic discussions.",
+                description: "Our AI agents can simulate complex business scenarios, from international trade negotiations to strategic partnerships, helping Swiss businesses prepare for real-world challenges. This technology enables companies to:",
+                benefits: [
+                    "Practice and refine negotiation strategies",
+                    "Understand different cultural and business perspectives",
+                    "Analyze potential business scenarios and outcomes",
+                    "Train teams in international business communication"
+                ]
+            },
+            recruitmentWorkflow: {
+                title: "AI-Powered Recruitment Workflow",
+                clientChallengeTitle: "Client Challenge:",
+                clientChallenge: "A mid-sized tech company faced slow and inefficient hiring due to manual resume screening. Their HR team spent 14+ hours per recruitment cycle, leading to delays, inconsistencies, and missed top talent.",
+                solutionTitle: "Solution: AI-Powered Workflow",
+                solutionDescription: "We implemented an AI-driven recruitment workflow to automate CV screening and candidate ranking. Key features:",
+                solutionFeatures: [
+                    "Automated Resume Collection: Centralized resumes from multiple sources.",
+                    "AI Screening: NLP models filtered resumes based on job requirements.",
+                    "Key Information Extraction: AI extracted skills, experience, and education.",
+                    "Candidate Ranking: Ranked candidates by match score.",
+                    "Actionable Insights: Delivered a ranked candidate list with key metrics."
+                ],
+                resultsTitle: "Results:",
+                results: [
+                    "85% Faster Hiring: Recruitment cycle reduced from 14.5 hours to 2 hours.",
+                    "Improved Candidate Quality: Unbiased screening ensured better-matched candidates.",
+                    "Scalability: Handled 500+ resumes per job posting effortlessly.",
+                    "HR Productivity: Freed HR teams to focus on strategic tasks."
+                ]
+            }
+        },
+        contact: {
+            title: "Contact Us",
+            subtitle: "Get in touch",
+            description: "We'd love to hear from you. Please email us at:"
         }
     },
     de: {
@@ -165,7 +232,74 @@ const i18n = {
             focus: "Autonome KI-Lösungen maßgeschneidert für Schweizer Exzellenz"
         },
         services: {
-            title: "Unsere Dienstleistungen"
+            title: "Unsere Dienstleistungen",
+            strategy: {
+                title: "KI-Strategie",
+                description: "Transformieren Sie Ihr Schweizer Unternehmen mit strategischer KI-Integration. Wir entwickeln autonome Systeme, die Schweizer Marktdynamik, regulatorische Anforderungen und mehrsprachige Kommunikationsbedürfnisse verstehen."
+            },
+            development: {
+                title: "KI-Agenten Entwicklung",
+                description: "Maßgeschneiderte KI-Agenten für Schweizer Geschäftseffizienz. Unsere Lösungen automatisieren komplexe Aufgaben unter Einhaltung der hohen Standards des Schweizer Marktes."
+            },
+            swiss: {
+                title: "Schweizer Marktexzellenz",
+                description: "Unsere KI-Agenten sind speziell entwickelt, um den einzigartigen Anforderungen des Schweizer Marktes gerecht zu werden, indem sie Präzision, Zuverlässigkeit und Innovation kombinieren.",
+                features: [
+                    "Integration in Schweizer Banking & Finanzwesen",
+                    "Healthcare & Pharma Compliance",
+                    "Präzisionsindustrie-Automation",
+                    "Mehrsprachige Geschäftskommunikation"
+                ],
+                benefits: {
+                    title: "Vorteile für Schweizer Unternehmen:",
+                    list: [
+                        "Reduzierung der Betriebskosten um bis zu 40%",
+                        "Verbesserte Entscheidungsfindung durch KI-gestützte Erkenntnisse",
+                        "Automatisierung komplexer mehrsprachiger Kommunikation",
+                        "Gewährleistung der Einhaltung Schweizer Vorschriften"
+                    ]
+                }
+            }
+        },
+        cases: {
+            title: "Erfolgsgeschichten",
+            deepConversations: {
+                title: "KI-gestützte tiefgreifende Gespräche",
+                overview: "Bei Tubban AI Agent haben wir einen innovativen KI-Workflow entwickelt, der es zwei KI-Sprachmodellen ermöglicht, in anspruchsvollen Geschäftsgesprächen und strategischen Diskussionen zu interagieren.",
+                description: "Unsere KI-Agenten können komplexe Geschäftsszenarien simulieren, von internationalen Handelsverhandlungen bis hin zu strategischen Partnerschaften, und helfen Schweizer Unternehmen, sich auf reale Herausforderungen vorzubereiten. Diese Technologie ermöglicht es Unternehmen:",
+                benefits: [
+                    "Verhandlungsstrategien üben und verfeinern",
+                    "Unterschiedliche kulturelle und geschäftliche Perspektiven verstehen",
+                    "Potenzielle Geschäftsszenarien und Ergebnisse analysieren",
+                    "Teams in internationaler Geschäftskommunikation schulen"
+                ]
+            },
+            recruitmentWorkflow: {
+                title: "KI-gestützter Rekrutierungsworkflow",
+                clientChallengeTitle: "Kunden-Herausforderung:",
+                clientChallenge: "Ein mittelständisches Technologieunternehmen stand vor langsamen und ineffizienten Einstellungsverfahren aufgrund der manuellen Lebenslauf-Durchsicht. Das HR-Team verbrachte mehr als 14 Stunden pro Rekrutierungszyklus, was zu Verzögerungen, Inkonsistenzen und dem Verlust von Top-Talenten führte.",
+                solutionTitle: "Lösung: KI-gestützter Workflow",
+                solutionDescription: "Wir implementierten einen KI-gesteuerten Rekrutierungsworkflow, um die Lebenslauf-Prüfung und Kandidatenbewertung zu automatisieren. Wichtige Funktionen:",
+                solutionFeatures: [
+                    "Automatisierte Lebenslauf-Sammlung: Zentralisierte Sammlung von Lebensläufen aus verschiedenen Quellen.",
+                    "KI-gestützte Prüfung: NLP-Modelle filterten Lebensläufe basierend auf den Jobanforderungen.",
+                    "Extraktion wichtiger Informationen: KI extrahierte Fähigkeiten, Erfahrungen und Bildung.",
+                    "Kandidatenbewertung: Kandidaten wurden anhand eines Matching-Scores bewertet.",
+                    "Umsetzbare Erkenntnisse: Eine sortierte Kandidatenliste mit wichtigen Kennzahlen wurde bereitgestellt."
+                ],
+                resultsTitle: "Ergebnisse:",
+                results: [
+                    "85% schnellere Einstellungen: Der Rekrutierungszyklus wurde von 14,5 Stunden auf 2 Stunden reduziert.",
+                    "Verbesserte Kandidatenqualität: Unvoreingenommene Prüfung führte zu besser passenden Kandidaten.",
+                    "Skalierbarkeit: Mehr als 500 Lebensläufe pro Stellenausschreibung wurden mühelos verarbeitet.",
+                    "Produktivität des HR-Teams: Das HR-Team konnte sich auf strategische Aufgaben konzentrieren."
+                ]
+            }
+        },
+        contact: {
+            title: "Kontakt",
+            subtitle: "Kontaktieren Sie uns",
+            description: "Wir würden uns freuen, von Ihnen zu hören. Bitte senden Sie uns eine E-Mail an:"
         }
     },
     fr: {
@@ -182,7 +316,26 @@ const i18n = {
             focus: "Solutions IA autonomes sur mesure pour l'excellence suisse"
         },
         services: {
-            title: "Nos Services"
+            title: "Nos Services",
+            swiss: {
+                title: "Excellence du Marché Suisse",
+                description: "Nos agents IA sont spécialement conçus pour répondre aux exigences uniques du marché suisse, combinant précision, fiabilité et innovation.",
+                features: [
+                    "Intégration Bancaire & Financière Suisse",
+                    "Conformité Santé & Pharma",
+                    "Automatisation de l'Industrie de Précision",
+                    "Communication d'Affaires Multilingue"
+                ],
+                benefits: {
+                    title: "Avantages pour les Entreprises Suisses:",
+                    list: [
+                        "Réduction des coûts opérationnels jusqu'à 40%",
+                        "Amélioration de la prise de décision grâce aux insights IA",
+                        "Automatisation des communications multilingues complexes",
+                        "Garantie de conformité aux réglementations suisses"
+                    ]
+                }
+            }
         }
     },
     it: {
@@ -199,7 +352,26 @@ const i18n = {
             focus: "Soluzioni IA autonome su misura per l'eccellenza svizzera"
         },
         services: {
-            title: "I Nostri Servizi"
+            title: "I Nostri Servizi",
+            swiss: {
+                title: "Eccellenza del Mercato Svizzero",
+                description: "I nostri agenti IA sono specificamente progettati per soddisfare le esigenze uniche del mercato svizzero, combinando precisione, affidabilità e innovazione.",
+                features: [
+                    "Integrazione Bancaria e Finanziaria Svizzera",
+                    "Conformità Sanitaria e Farmaceutica",
+                    "Automazione dell'Industria di Precisione",
+                    "Comunicazione Aziendale Multilingue"
+                ],
+                benefits: {
+                    title: "Vantaggi per le Aziende Svizzere:",
+                    list: [
+                        "Riduzione dei costi operativi fino al 40%",
+                        "Miglioramento del processo decisionale con insights basati su IA",
+                        "Automazione delle comunicazioni multilingue complesse",
+                        "Garanzia di conformità alle normative svizzere"
+                    ]
+                }
+            }
         }
     }
 };
@@ -239,18 +411,23 @@ function switchLanguage(lang) {
     updateContent(lang);
 }
 
-// 初始化语言切换功能
+// 修改后的 initLanguageSwitcher 函数（下拉框版，添加空值检查）
 function initLanguageSwitcher() {
-    console.log('Initializing language switcher...');
-    const buttons = document.querySelectorAll('.lang-btn');
+    console.log('Initializing language switcher (dropdown)...');
+    const langSelector = document.getElementById('language-selector');
     
-    buttons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const lang = btn.dataset.lang;
-            console.log('Language button clicked:', lang);
-            switchLanguage(lang);
-        });
+    if (!langSelector) {
+        console.error("Cannot initialize language switcher: element with id 'language-selector' not found.");
+        return;
+    }
+    
+    // 设置下拉框默认选中当前语言
+    langSelector.value = currentLang;
+    
+    langSelector.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        console.log('Language changed to:', lang);
+        switchLanguage(lang);
     });
     
     // 初始化页面内容

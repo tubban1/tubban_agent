@@ -32,10 +32,12 @@
                     <img src="images/logo.png" alt="Tubban Agent Logo" width="120" height="40">
                 </div>
                 <div class="language-switcher">
-                    <button class="lang-btn active" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="de">DE</button>
-                    <button class="lang-btn" data-lang="fr">FR</button>
-                    <button class="lang-btn" data-lang="it">IT</button>
+                    <select id="language-selector">
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                        <option value="fr">FR</option>
+                        <option value="it">IT</option>
+                    </select>
                 </div>
             </div>
             <div class="nav-links">
@@ -66,8 +68,8 @@
         <div class="services-grid">
             <div class="service-card">
                 <img src="images/ai-strategy.jpg" alt="Agentic AI Strategy" class="service-icon">
-                <h3>Agentic AI Strategy</h3>
-                <p>Transform your Swiss business with strategic AI agent integration. We develop autonomous systems that understand Swiss market dynamics, regulatory requirements, and multilingual communication needs.</p>
+                <h3 data-i18n="services.strategy.title">Agentic AI Strategy</h3>
+                <p data-i18n="services.strategy.description">Transform your Swiss business with strategic AI agent integration. We develop autonomous systems that understand Swiss market dynamics, regulatory requirements, and multilingual communication needs.</p>
                 <ul class="service-features">
                     <li>Swiss Market Analysis & Integration</li>
                     <li>Regulatory Compliant Architecture</li>
@@ -76,8 +78,8 @@
             </div>
             <div class="service-card">
                 <img src="images/ai-development.jpg" alt="AI Agent Development" class="service-icon">
-                <h3>AI Agent Development</h3>
-                <p>Custom AI agents built for Swiss business efficiency. Our solutions automate complex tasks while maintaining the high standards expected in the Swiss market.</p>
+                <h3 data-i18n="services.development.title">AI Agent Development</h3>
+                <p data-i18n="services.development.description">Custom AI agents built for Swiss business efficiency. Our solutions automate complex tasks while maintaining the high standards expected in the Swiss market.</p>
                 <ul class="service-features">
                     <li>Autonomous Business Processes</li>
                     <li>Intelligent Decision Support</li>
@@ -88,21 +90,21 @@
         <div id="swiss-market" class="swiss-market-focus tech-bg">
             <div class="tech-overlay"></div>
             <div class="content-wrapper">
-                <h3>Swiss Market Excellence</h3>
-                <p>Our AI agents are specifically designed to meet the unique demands of the Swiss market, combining precision, reliability, and innovation.</p>
+                <h3 data-i18n="services.swiss.title">Swiss Market Excellence</h3>
+                <p data-i18n="services.swiss.description">Our AI agents are specifically designed to meet the unique demands of the Swiss market, combining precision, reliability, and innovation.</p>
                 <ul class="swiss-features">
-                    <li>Swiss Banking & Finance Integration</li>
-                    <li>Healthcare & Pharma Compliance</li>
-                    <li>Precision Industry Automation</li>
-                    <li>Multilingual Business Communication</li>
+                    <li data-i18n="services.swiss.features.0">Swiss Banking & Finance Integration</li>
+                    <li data-i18n="services.swiss.features.1">Healthcare & Pharma Compliance</li>
+                    <li data-i18n="services.swiss.features.2">Precision Industry Automation</li>
+                    <li data-i18n="services.swiss.features.3">Multilingual Business Communication</li>
                 </ul>
                 <div class="swiss-benefits">
-                    <h4>Benefits for Swiss Businesses:</h4>
+                    <h4 data-i18n="services.swiss.benefits.title">Benefits for Swiss Businesses:</h4>
                     <ul>
-                        <li>Reduce operational costs by up to 40%</li>
-                        <li>Enhance decision-making with AI-driven insights</li>
-                        <li>Automate complex multilingual communications</li>
-                        <li>Ensure compliance with Swiss regulations</li>
+                        <li data-i18n="services.swiss.benefits.list.0">Reduce operational costs by up to 40%</li>
+                        <li data-i18n="services.swiss.benefits.list.1">Enhance decision-making with AI-driven insights</li>
+                        <li data-i18n="services.swiss.benefits.list.2">Automate complex multilingual communications</li>
+                        <li data-i18n="services.swiss.benefits.list.3">Ensure compliance with Swiss regulations</li>
                     </ul>
                 </div>
             </div>
@@ -110,19 +112,19 @@
     </section>
 
     <section id="cases">
-        <h2>Success Cases</h2>
+        <h2 data-i18n="cases.title">Success Cases</h2>
         <div class="cases-grid">
             <div class="case-card">
                 <img src="images/ai-conversation.jpg" alt="AI Conversation" class="case-image">
-                <h3>AI-Powered Deep Conversations</h3>
+                <h3 data-i18n="cases.deepConversations.title">AI-Powered Deep Conversations</h3>
                 <div class="case-content">
-                    <p class="case-overview">At Tubban AI Agent, we developed an innovative AI workflow that enables two AI language models to engage in sophisticated business negotiations and strategic discussions.</p>
-                    <p class="case-description">Our AI agents can simulate complex business scenarios, from international trade negotiations to strategic partnerships, helping Swiss businesses prepare for real-world challenges. This technology enables companies to:</p>
+                    <p class="case-overview" data-i18n="cases.deepConversations.overview">At Tubban AI Agent, we developed an innovative AI workflow that enables two AI language models to engage in sophisticated business negotiations and strategic discussions.</p>
+                    <p class="case-description" data-i18n="cases.deepConversations.description">Our AI agents can simulate complex business scenarios, from international trade negotiations to strategic partnerships, helping Swiss businesses prepare for real-world challenges. This technology enables companies to:</p>
                     <ul class="case-benefits">
-                        <li>Practice and refine negotiation strategies</li>
-                        <li>Understand different cultural and business perspectives</li>
-                        <li>Analyze potential business scenarios and outcomes</li>
-                        <li>Train teams in international business communication</li>
+                        <li data-i18n="cases.deepConversations.benefits.0">Practice and refine negotiation strategies</li>
+                        <li data-i18n="cases.deepConversations.benefits.1">Understand different cultural and business perspectives</li>
+                        <li data-i18n="cases.deepConversations.benefits.2">Analyze potential business scenarios and outcomes</li>
+                        <li data-i18n="cases.deepConversations.benefits.3">Train teams in international business communication</li>
                     </ul>
                     <div class="case-diagram">
                         <div class="mermaid">
@@ -148,15 +150,69 @@
                     </div>
                 </div>
             </div>
+            <div class="case-card">
+                <img src="images/ai-recruitment.jpg" alt="AI Recruitment Workflow" class="case-image">
+                <h3 data-i18n="cases.recruitmentWorkflow.title">AI-Powered Recruitment Workflow</h3>
+                <div class="case-content">
+                    <p class="case-overview">
+                        <strong data-i18n="cases.recruitmentWorkflow.clientChallengeTitle">Client Challenge:</strong><br>
+                        <span data-i18n="cases.recruitmentWorkflow.clientChallenge">A mid-sized tech company faced slow and inefficient hiring due to manual resume screening.</span>
+                    </p>
+                    <p class="case-description">
+                        <strong data-i18n="cases.recruitmentWorkflow.solutionTitle">Solution: AI-Powered Workflow</strong><br>
+                        <span data-i18n="cases.recruitmentWorkflow.solutionDescription">We implemented an AI-driven recruitment workflow to automate CV screening and candidate ranking. Key features:</span>
+                    </p>
+                    <ul class="case-benefits">
+                        <li data-i18n="cases.recruitmentWorkflow.solutionFeatures.0">Automated Resume Collection: Centralized resumes from multiple sources.</li>
+                        <li data-i18n="cases.recruitmentWorkflow.solutionFeatures.1">AI Screening: NLP models filtered resumes based on job requirements.</li>
+                        <li data-i18n="cases.recruitmentWorkflow.solutionFeatures.2">Key Information Extraction: AI extracted skills, experience, and education.</li>
+                        <li data-i18n="cases.recruitmentWorkflow.solutionFeatures.3">Candidate Ranking: Ranked candidates by match score.</li>
+                        <li data-i18n="cases.recruitmentWorkflow.solutionFeatures.4">Actionable Insights: Delivered a ranked candidate list with key metrics.</li>
+                    </ul>
+                    <p class="case-overview">
+                        <strong data-i18n="cases.recruitmentWorkflow.resultsTitle">Results:</strong>
+                    </p>
+                    <ul class="case-benefits">
+                        <li data-i18n="cases.recruitmentWorkflow.results.0">85% Faster Hiring: Recruitment cycle reduced from 14.5 hours to 2 hours.</li>
+                        <li data-i18n="cases.recruitmentWorkflow.results.1">Improved Candidate Quality: Unbiased screening ensured better-matched candidates.</li>
+                        <li data-i18n="cases.recruitmentWorkflow.results.2">Scalability: Handled 500+ resumes per job posting effortlessly.</li>
+                        <li data-i18n="cases.recruitmentWorkflow.results.3">HR Productivity: Freed HR teams to focus on strategic tasks.</li>
+                    </ul>
+                    <div class="case-diagram">
+                        <div class="mermaid">
+                            gantt
+                                title HR Time Comparison: AI Workflow vs. Manual Review
+                                dateFormat  HH:mm
+                                axisFormat  %Hh
+                                section AI Workflow
+                                Collect Resumes :done, a1, 00:00, 01:00
+                                Preprocess Resume Data :done, a2, 01:00, 01:30
+                                CV Screening :done, a3, 01:30, 01:40
+                                Extract Key Information :done, a4, 01:40, 01:55
+                                Match Job Requirements :done, a5, 01:55, 02:05
+                                Generate Candidate Ranking :done, a6, 02:05, 02:10
+                                Output Results :done, a7, 02:10, 02:15
+                                section Manual Review
+                                Collect Resumes :done, b1, 00:00, 01:00
+                                Preprocess Resume Data :done, b2, 01:00, 03:00
+                                CV Screening :done, b3, 03:00, 08:00
+                                Extract Key Information :done, b4, 08:00, 11:00
+                                Match Job Requirements :done, b5, 11:00, 13:00
+                                Generate Candidate Ranking :done, b6, 13:00, 14:00
+                                Output Results :done, b7, 14:00, 14:30
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2 data-i18n="contact.title">Contact Us</h2>
         <div class="contact-container">
             <div class="contact-info">
-                <h3>Get in touch</h3>
-                <p>We'd love to hear from you. Please email us at:</p>
+                <h3 data-i18n="contact.subtitle">Get in touch</h3>
+                <p data-i18n="contact.description">We'd love to hear from you. Please email us at:</p>
                 <a href="mailto:info@tubban.com" class="email-link">info@tubban.com</a>
                 <p class="contact-description">
                     Our team will respond to your inquiry within 24 hours.

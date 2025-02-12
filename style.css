@@ -1188,4 +1188,38 @@ img.loaded {
         padding: 0.2rem 0.4rem;
         font-size: 0.75rem;
     }
+}
+
+/* 美化语言切换下拉框 */
+.language-switcher select {
+    appearance: none;             /* 去掉浏览器默认的下拉箭头样式 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.4rem 1.5rem 0.4rem 0.8rem;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* 添加自定义下拉箭头，使用内嵌 SVG 图标 */
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23666' d='M4 6l4 4 4-4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.4rem center;
+    background-size: 1rem;
+}
+
+.language-switcher select:hover {
+    background-color: #f5f5f5;
+}
+
+.language-switcher select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.language-switcher {
+    margin-left: 1rem;
 } 
