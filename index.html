@@ -114,7 +114,7 @@
     <section id="cases">
         <h2 data-i18n="cases.title">Success Cases</h2>
         <div class="cases-grid">
-            <div class="case-card">
+            <div class="case-card hidden">
                 <img src="images/ai-conversation.jpg" alt="AI Conversation" class="case-image">
                 <h3 data-i18n="cases.deepConversations.title">AI-Powered Deep Conversations</h3>
                 <div class="case-content">
@@ -169,6 +169,17 @@
                         <li data-i18n="cases.recruitmentWorkflow.solutionFeatures.3">Candidate Ranking: Ranked candidates by match score.</li>
                         <li data-i18n="cases.recruitmentWorkflow.solutionFeatures.4">Actionable Insights: Delivered a ranked candidate list with key metrics.</li>
                     </ul>
+                    <div class="source-files">
+                        <h4>Source Files:</h4>
+                        <ul>
+                            <li><a href="files/job_description.pdf" target="_blank">Job Description</a></li>
+                            <li><a href="files/cv_emma_fischer.pdf" target="_blank">CV - Emma Fischer</a></li>
+                            <li><a href="files/cv_carlos_rivera.pdf" target="_blank">CV - Carlos Rivera</a></li>
+                            <li><a href="files/cv_david_schmid.pdf" target="_blank">CV - David Schmid</a></li>
+                            <li><a href="files/cv_julia_meier.pdf" target="_blank">CV - Julia Meier</a></li>
+                            <li><a href="files/cv_sophie_dubois.pdf" target="_blank">CV - Sophie Dubois</a></li>
+                        </ul>
+                    </div>
                     <p class="case-overview">
                         <strong data-i18n="cases.recruitmentWorkflow.resultsTitle">Results:</strong>
                     </p>
@@ -178,28 +189,34 @@
                         <li data-i18n="cases.recruitmentWorkflow.results.2">Scalability: Handled 500+ resumes per job posting effortlessly.</li>
                         <li data-i18n="cases.recruitmentWorkflow.results.3">HR Productivity: Freed HR teams to focus on strategic tasks.</li>
                     </ul>
+                    <div class="evaluation-link">
+                        <a href="evaluation.html" target="_blank" class="view-evaluation-btn">View Detailed Evaluation Results</a>
+                    </div>
                     <div class="case-diagram">
                         <div class="mermaid">
                             gantt
-                                title HR Time Comparison: AI Workflow vs. Manual Review
-                                dateFormat  HH:mm
-                                axisFormat  %Hh
-                                section AI Workflow
-                                Collect Resumes :done, a1, 00:00, 01:00
-                                Preprocess Resume Data :done, a2, 01:00, 01:30
-                                CV Screening :done, a3, 01:30, 01:40
-                                Extract Key Information :done, a4, 01:40, 01:55
-                                Match Job Requirements :done, a5, 01:55, 02:05
-                                Generate Candidate Ranking :done, a6, 02:05, 02:10
-                                Output Results :done, a7, 02:10, 02:15
-                                section Manual Review
-                                Collect Resumes :done, b1, 00:00, 01:00
-                                Preprocess Resume Data :done, b2, 01:00, 03:00
-                                CV Screening :done, b3, 03:00, 08:00
-                                Extract Key Information :done, b4, 08:00, 11:00
-                                Match Job Requirements :done, b5, 11:00, 13:00
-                                Generate Candidate Ranking :done, b6, 13:00, 14:00
-                                Output Results :done, b7, 14:00, 14:30
+                            title HR Time Comparison
+                            dateFormat  HH:mm
+                            axisFormat  %Hh
+                            section AI
+                            "AI Workflowvs" : milestone, m1, 00:00, 00:00
+                            Collect Resumes :done, a1, 00:00, 01:00
+                            Preprocess Resume Data :done, a2, 01:00, 01:30
+                            CV Screening :done, a3, 01:30, 01:40
+                            Extract Key Information :done, a4, 01:40, 01:55
+                            Match Job Requirements :done, a5, 01:55, 02:05
+                            Generate Candidate Ranking :done, a6, 02:05, 02:10
+                            Output Results :done, a7, 02:10, 02:15
+                            section Manual
+                         "Manual Review" : milestone, m2, 00:00, 00:00    
+                        Collect Resumes :done, b1, 00:00, 01:00
+                            Preprocess Resume Data :done, b2, 01:00, 03:00
+                            CV Screening :done, b3, 03:00, 08:00
+                            Extract Key Information :done, b4, 08:00, 11:00
+                            Match Job Requirements :done, b5, 11:00, 13:00
+                            Generate Candidate Ranking :done, b6, 13:00, 14:00
+                            Output Results :done, b7, 14:00, 14:30
+                        
                         </div>
                     </div>
                 </div>

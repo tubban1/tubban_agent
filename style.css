@@ -1222,4 +1222,72 @@ img.loaded {
 
 .language-switcher {
     margin-left: 1rem;
+}
+
+/* 用于隐藏元素的通用类 */
+.hidden {
+    display: none !important;
+}
+
+/* 源文件列表样式 */
+.source-files {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.source-files h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.source-files ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.source-files a {
+    display: block;
+    padding: 0.8rem 1rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.source-files a:hover {
+    background: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+}
+
+/* 评估结果链接按钮样式 */
+.evaluation-link {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.view-evaluation-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.view-evaluation-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
 } 

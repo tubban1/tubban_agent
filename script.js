@@ -317,6 +317,14 @@ const i18n = {
         },
         services: {
             title: "Nos Services",
+            strategy: {
+                title: "Stratégie IA",
+                description: "Transformez votre entreprise suisse avec l'intégration stratégique d'agents IA. Nous développons des systèmes autonomes qui comprennent la dynamique du marché suisse, les exigences réglementaires et les besoins en communication multilingue."
+            },
+            development: {
+                title: "Développement d'agents IA",
+                description: "Agents IA personnalisés pour l'efficacité des entreprises suisses. Nos solutions automatisent les tâches complexes tout en maintenant les normes élevées attendues sur le marché suisse."
+            },
             swiss: {
                 title: "Excellence du Marché Suisse",
                 description: "Nos agents IA sont spécialement conçus pour répondre aux exigences uniques du marché suisse, combinant précision, fiabilité et innovation.",
@@ -336,6 +344,46 @@ const i18n = {
                     ]
                 }
             }
+        },
+        cases: {
+            title: "Études de cas",
+            deepConversations: {
+                title: "Conversations approfondies pilotées par l'IA",
+                overview: "Chez Tubban AI Agent, nous avons développé un flux de travail innovant basé sur l'IA permettant à deux modèles linguistiques d'IA de s'engager dans des négociations commerciales sophistiquées et des discussions stratégiques.",
+                description: "Nos agents IA peuvent simuler des scénarios commerciaux complexes, allant des négociations commerciales internationales aux partenariats stratégiques, aidant ainsi les entreprises suisses à se préparer aux défis du monde réel. Cette technologie permet aux entreprises de :",
+                benefits: [
+                    "Pratiquer et affiner les stratégies de négociation",
+                    "Comprendre différentes perspectives culturelles et commerciales",
+                    "Analyser les scénarios commerciaux potentiels et leurs résultats",
+                    "Former les équipes à la communication commerciale internationale"
+                ]
+            },
+            recruitmentWorkflow: {
+                title: "Flux de travail de recrutement piloté par l'IA",
+                clientChallengeTitle: "Défi Client :",
+                clientChallenge: "Une entreprise technologique de taille moyenne faisait face à des processus de recrutement lents et inefficaces en raison du tri manuel des CV. Leur équipe RH passait plus de 14 heures par cycle de recrutement, entraînant des retards, des incohérences et la perte de talents précieux.",
+                solutionTitle: "Solution : Flux de travail piloté par l'IA",
+                solutionDescription: "Nous avons mis en place un flux de travail de recrutement basé sur l'IA pour automatiser le tri des CV et le classement des candidats. Les caractéristiques clés sont :",
+                solutionFeatures: [
+                    "Collecte automatisée des CV : Centralisation des CV provenant de plusieurs sources.",
+                    "Tri par IA : Des modèles NLP ont filtré les CV en fonction des exigences du poste.",
+                    "Extraction d'informations clés : L'IA a extrait les compétences, l'expérience et la formation.",
+                    "Classement des candidats : Les candidats ont été classés par score de correspondance.",
+                    "Informations exploitables : Une liste classée de candidats avec des indicateurs clés a été fournie."
+                ],
+                resultsTitle: "Résultats :",
+                results: [
+                    "Recrutement 85% plus rapide : Le cycle de recrutement est passé de 14,5 heures à 2 heures.",
+                    "Amélioration de la qualité des candidats : Un tri impartial a assuré une meilleure adéquation des candidats.",
+                    "Scalabilité : Plus de 500 CV par offre d'emploi ont été traités sans effort.",
+                    "Productivité RH : L'équipe RH a pu se concentrer sur des tâches stratégiques."
+                ]
+            }
+        },
+        contact: {
+            title: "Contact",
+            subtitle: "Prenez contact",
+            description: "Nous serions ravis de recevoir de vos nouvelles. Veuillez nous envoyer un e-mail à:"
         }
     },
     it: {

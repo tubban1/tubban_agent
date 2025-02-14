@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Evaluation | Tubban Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .evaluation-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .evaluation-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .evaluation-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: #fff;
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="left-nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Tubban Agent Logo" width="120" height="40">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="evaluation-container">
+        <div class="evaluation-header">
+            <h1>CV Evaluation</h1>
+        </div>
+
+        <h3 id="summary">Summary</h3>
+        <table>
+        <thead>
+        <tr>
+        <th>Name</th>
+        <th>Total Match Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Emma Fischer</td>
+        <td>71.5%%</td>
+        </tr>
+        <tr>
+        <td>Carlos Rivera</td>
+        <td>85.25%%</td>
+        </tr>
+        <tr>
+        <td>David Schmid</td>
+        <td>93%%</td>
+        </tr>
+        <tr>
+        <td>Julia Meier</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Sophie Dubois</td>
+        <td>66%%</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <h3 id="emma-fischer-evaluation">Emma Fischer Evaluation</h3>
+        <table>
+        <thead>
+        <tr>
+        <th>Criterion</th>
+        <th>Job Requirement</th>
+        <th>Candidate Value</th>
+        <th>Weight</th>
+        <th>Match Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Experience</td>
+        <td>2+ years in an administrative, secretarial, or office management role</td>
+        <td>6+ years in client-facing roles with administrative responsibilities</td>
+        <td>20%</td>
+        <td>70%%</td>
+        </tr>
+        <tr>
+        <td>Education</td>
+        <td>Bachelor's degree or equivalent experience in business administration, office management, or related fields</td>
+        <td>Bachelor's in Tourism & Hospitality Management</td>
+        <td>15%</td>
+        <td>80%%</td>
+        </tr>
+        <tr>
+        <td>Technical Skills</td>
+        <td>Proficiency in Google Workspace (Docs, Sheets, Slides, Calendar, Meet) and MS Office</td>
+        <td>Proficiency not explicitly mentioned</td>
+        <td>20%</td>
+        <td>30%%</td>
+        </tr>
+        <tr>
+        <td>Language</td>
+        <td>Fluent in English; German or French is a plus</td>
+        <td>Fluent in English, German, and French</td>
+        <td>10%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Soft Skills</td>
+        <td>Exceptional organization, time management, communication, and multitasking abilities</td>
+        <td>Time Management & Multitasking, Office Administration & Scheduling, Customer Service Excellence</td>
+        <td>20%</td>
+        <td>90%%</td>
+        </tr>
+        <tr>
+        <td>Attention to Detail</td>
+        <td>Ability to handle sensitive information with discretion and accuracy</td>
+        <td>Experience in handling high-pressure environments and coordinating administrative projects</td>
+        <td>15%</td>
+        <td>75%%</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <h3 id="carlos-rivera-evaluation">Carlos Rivera Evaluation</h3>
+        <table>
+        <thead>
+        <tr>
+        <th>Criterion</th>
+        <th>Job Requirement</th>
+        <th>Candidate Value</th>
+        <th>Weight</th>
+        <th>Match Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Experience</td>
+        <td>2+ years in an administrative, secretarial, or office management role</td>
+        <td>7+ years in multinational firms as an executive secretary and front desk coordinator</td>
+        <td>20%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Education</td>
+        <td>Bachelor's degree or equivalent experience in business administration, office management, or related fields</td>
+        <td>Diploma in Office Management & Administration</td>
+        <td>15%</td>
+        <td>75%%</td>
+        </tr>
+        <tr>
+        <td>Technical Skills</td>
+        <td>Proficiency in Google Workspace (Docs, Sheets, Slides, Calendar, Meet) and MS Office</td>
+        <td>Professional Communication & Documentation (no explicit mention of Google Workspace or MS Office)</td>
+        <td>20%</td>
+        <td>50%%</td>
+        </tr>
+        <tr>
+        <td>Language</td>
+        <td>Fluent in English; German or French is a plus</td>
+        <td>Fluent in English, Spanish, and German</td>
+        <td>10%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Soft Skills</td>
+        <td>Exceptional organization, time management, communication, and multitasking abilities</td>
+        <td>Meeting & Event Coordination, Professional Communication & Documentation</td>
+        <td>20%</td>
+        <td>90%%</td>
+        </tr>
+        <tr>
+        <td>Attention to Detail</td>
+        <td>Ability to handle sensitive information with discretion and accuracy</td>
+        <td>Managed correspondence, reports, and confidential records for senior executives</td>
+        <td>15%</td>
+        <td>100%%</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <h3 id="david-schmid-evaluation">David Schmid Evaluation</h3>
+        <table>
+        <thead>
+        <tr>
+        <th>Criterion</th>
+        <th>Job Requirement</th>
+        <th>Candidate Value</th>
+        <th>Weight</th>
+        <th>Match Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Experience</td>
+        <td>2+ years in an administrative, secretarial, or office management role</td>
+        <td>2 years in administrative roles (Internship and Part-Time)</td>
+        <td>20%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Education</td>
+        <td>Bachelor's degree or equivalent experience in business administration, office management, or related fields</td>
+        <td>Bachelor's in Business & Finance</td>
+        <td>15%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Technical Skills</td>
+        <td>Proficiency in Google Workspace (Docs, Sheets, Slides, Calendar, Meet) and MS Office</td>
+        <td>Proficiency in Google Sheets & Excel (Finance Focus)</td>
+        <td>20%</td>
+        <td>80%%</td>
+        </tr>
+        <tr>
+        <td>Language</td>
+        <td>Fluent in English; German or French is a plus</td>
+        <td>English and German (inferred from location and name)</td>
+        <td>10%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Soft Skills</td>
+        <td>Exceptional organization, time management, communication, and multitasking abilities</td>
+        <td>Highly organized, experience in scheduling and document management</td>
+        <td>20%</td>
+        <td>90%%</td>
+        </tr>
+        <tr>
+        <td>Attention to Detail</td>
+        <td>Ability to handle sensitive information with discretion and accuracy</td>
+        <td>Experience in document preparation for financial reports and data management</td>
+        <td>15%</td>
+        <td>90%%</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <h3 id="julia-meier-evaluation">Julia Meier Evaluation</h3>
+        <table>
+        <thead>
+        <tr>
+        <th>Criterion</th>
+        <th>Job Requirement</th>
+        <th>Candidate Value</th>
+        <th>Weight</th>
+        <th>Match Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Experience</td>
+        <td>2+ years in an administrative, secretarial, or office management role</td>
+        <td>5 years in administrative roles</td>
+        <td>20%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Education</td>
+        <td>Bachelor's degree or equivalent experience in business administration, office management, or related fields</td>
+        <td>Bachelor's in Business Administration</td>
+        <td>15%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Technical Skills</td>
+        <td>Proficiency in Google Workspace (Docs, Sheets, Slides, Calendar, Meet) and MS Office</td>
+        <td>Google Workspace, Microsoft Office</td>
+        <td>20%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Language</td>
+        <td>Fluent in English; German or French is a plus</td>
+        <td>Fluent in English and German</td>
+        <td>10%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Soft Skills</td>
+        <td>Exceptional organization, time management, communication, and multitasking abilities</td>
+        <td>Exceptional organization, time management, communication, and multitasking abilities</td>
+        <td>20%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Attention to Detail</td>
+        <td>Ability to handle sensitive information with discretion and accuracy</td>
+        <td>Detail-oriented and proactive</td>
+        <td>15%</td>
+        <td>100%%</td>
+        </tr>
+        </tbody>
+        </table>
+
+        <h3 id="sophie-dubois-evaluation">Sophie Dubois Evaluation</h3>
+        <table>
+        <thead>
+        <tr>
+        <th>Criterion</th>
+        <th>Job Requirement</th>
+        <th>Candidate Value</th>
+        <th>Weight</th>
+        <th>Match Percentage</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Experience</td>
+        <td>2+ years in an administrative, secretarial, or office management role</td>
+        <td>10+ years as a Personal Assistant and Executive Assistant</td>
+        <td>20%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Education</td>
+        <td>Bachelor's degree or equivalent experience in business administration, office management, or related fields</td>
+        <td>Executive Assistant Certification</td>
+        <td>15%</td>
+        <td>50%%</td>
+        </tr>
+        <tr>
+        <td>Technical Skills</td>
+        <td>Proficiency in Google Workspace (Docs, Sheets, Slides, Calendar, Meet) and MS Office</td>
+        <td>Not specified</td>
+        <td>20%</td>
+        <td>0%%</td>
+        </tr>
+        <tr>
+        <td>Language</td>
+        <td>Fluent in English; German or French is a plus</td>
+        <td>Not specified, but likely fluent in French (based on location)</td>
+        <td>10%</td>
+        <td>50%%</td>
+        </tr>
+        <tr>
+        <td>Soft Skills</td>
+        <td>Exceptional organization, time management, communication, and multitasking abilities</td>
+        <td>Exceptional organization, time management, communication, and multitasking abilities</td>
+        <td>20%</td>
+        <td>100%%</td>
+        </tr>
+        <tr>
+        <td>Attention to Detail</td>
+        <td>Ability to handle sensitive information with discretion and accuracy</td>
+        <td>Demonstrated ability to handle sensitive information with discretion and accuracy</td>
+        <td>15%</td>
+        <td>100%%</td>
+        </tr>
+        </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
