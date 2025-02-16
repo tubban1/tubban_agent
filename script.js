@@ -578,71 +578,56 @@ function updateMetaTags(section) {
         `Swiss AI Agent ${section} Services`;
 }
 
-// 初始化 EmailJS
-(function() {
-    emailjs.init("YOUR_PUBLIC_KEY"); // 替换为您的 EmailJS public key
-})();
+// 发送数据到 Google Sheets
 
-// 邮件发送功能
-function sendEmail(e) {
-    e.preventDefault();
-    
+document.getElementById('demoForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // 防止表单默认提交
+  
+    const submitButton = document.querySelector('.demo-submit-btn');
+    submitButton.disabled = true; // 禁用按钮，防止重复提交
+    submitButton.textContent = 'Submitting...';
+  
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // 显示发送中状态
-    const button = document.querySelector('#contact-form button');
-    const originalText = button.textContent;
-    button.disabled = true;
-    button.textContent = 'Sending...';
-
-    // 使用 EmailJS 发送邮件
-    emailjs.send(
-        "service_id", // 替换为您的 EmailJS service ID
-        "template_id", // 替换为您的 EmailJS template ID
-        {
-            from_name: name,
-            reply_to: email,
-            message: message,
-            to_email: "tubban.ch@gmail.com"
-        }
-    ).then(
-        function(response) {
-            console.log("SUCCESS", response);
-            alert('Thank you for your message. We will get back to you soon!');
-            document.getElementById('contact-form').reset();
-        },
-        function(error) {
-            console.log("FAILED", error);
-            alert('Sorry, there was an error sending your message. Please try again.');
-        }
-    ).finally(() => {
-        button.disabled = false;
-        button.textContent = originalText;
-    });
-}
-
-// 添加表单验证
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    if (!name || !email || !message) {
-        e.preventDefault();
-        alert('Please fill in all fields');
-        return false;
+    const telephone = document.getElementById('telephone').value || '';
+    const company = document.getElementById('company').value || '';
+  
+    if (!name || !email) {
+      alert('Please fill in name and email');
+      return;
     }
-    
+  
     // 验证邮箱格式
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        e.preventDefault();
-        alert('Please enter a valid email address');
-        return false;
+      alert('Please enter a valid email address');
+      return;
     }
-});
+  
+    // Google Apps Script 部署的 Web 应用 URL
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzt3mITUQEfmj4uzxfNq754aTuwKqzBpZwf5-G3XeRQJblLL-ZU1p7097TbEruix2Q3/exec';
+  
+    // 发送数据到 Google Sheets
+    fetch(scriptURL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, // 设置正确的 Content-Type
+      body: new URLSearchParams({ name, email, telephone, company }) // 使用 URLSearchParams
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Response data:', data);
+      alert('Form submitted successfully!');
+      document.getElementById('demoForm').reset();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error submitting the form.');
+    })
+    .finally(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Request Demo';
+    });
+  });
 
 // 页面滚动效果
 window.addEventListener('scroll', () => {

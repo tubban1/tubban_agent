@@ -5,7 +5,7 @@ const i18n = {
             services: "Services",
             cases: "Case Studies",
             swiss: "Swiss Market",
-            contact: "Contact"
+            demo: "Free Demo"
         },
         hero: {
             title: "Tubban AI Agent",
@@ -58,10 +58,17 @@ const i18n = {
                 ]
             }
         },
-        contact: {
-            title: "Contact Us",
-            subtitle: "Get in touch",
-            description: "We'd love to hear from you. Please email us at:"
+        demo: {
+            title: "Request a Free Demo",
+            subtitle: "Experience the Power of AI",
+            description: "Try our AI solutions with a personalized demo",
+            form: {
+                company: "Company",
+                name: "Name",
+                email: "Email",
+                telephone: "Telephone",
+                submit: "Request Demo"
+            }
         }
     },
     de: {
