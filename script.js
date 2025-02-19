@@ -229,7 +229,7 @@ const i18n = {
         hero: {
             title: "Tubban AI Agent",
             subtitle: "Stärkung Schweizer Unternehmen mit intelligenten Agenten",
-            focus: "Autonome KI-Lösungen maßgeschneidert für Schweizer Exzellenz"
+            focus: "Autonome KI-Lösungen massgeschneidert für Schweizer Exzellenz"
         },
         services: {
             title: "Unsere Dienstleistungen",
@@ -239,7 +239,7 @@ const i18n = {
             },
             development: {
                 title: "KI-Agenten Entwicklung",
-                description: "Maßgeschneiderte KI-Agenten für Schweizer Geschäftseffizienz. Unsere Lösungen automatisieren komplexe Aufgaben unter Einhaltung der hohen Standards des Schweizer Marktes."
+                description: "Massgeschneiderte KI-Agenten für Schweizer Geschäftseffizienz. Unsere Lösungen automatisieren komplexe Aufgaben unter Einhaltung der hohen Standards des Schweizer Marktes."
             },
             swiss: {
                 title: "Schweizer Marktexzellenz",
