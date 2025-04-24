@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>记忆配对游戏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>emoji记忆配对游戏</h1>
+      <div class="stats">
+        <span class="moves">步数: <span id="moves-count">0</span></span>
+        <span class="timer">时间: <span id="time">00:00</span></span>
+      </div>
+    </header>
+    
+    <div id="game-board"></div>
+    
+    <div class="controls">
+      <button id="restart">重新开始</button>
+    </div>
+  </div>
+
+  <div id="game-over-modal" class="modal">
+    <div class="modal-content">
+      <h2>恭喜！</h2>
+      <p>你完成了游戏！</p>
+      <p>用时: <span id="final-time">00:00</span></p>
+      <p>步数: <span id="final-moves">0</span></p>
+      <div class="teacher-message">
+        <p>Yuki老师为你的表现点赞！</p>
+        <p>继续加油哦！💪</p>
+      </div>
+      <button id="play-again">再玩一次</button>
+    </div>
+  </div>
+
+  <audio id="match-sound" src="sounds/match.wav" preload="auto"></audio>
+  <audio id="flip-sound" src="sounds/flip.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
