@@ -2,7 +2,8 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>Lotte晚安动画</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lotte Goodnight</title>
   <style>
     html, body {
       margin: 0;
@@ -36,7 +37,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* 小星星 */
     .star {
       position: absolute;
       width: 6px;
@@ -51,6 +51,20 @@
       0%, 100% { opacity: 0.3; }
       50% { opacity: 1; transform: scale(1.2); }
     }
+
+    /* 手机适配字体 */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1.2em;
+      }
+      .star {
+        width: 4px;
+        height: 4px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -58,7 +72,6 @@
   <p id="wish"></p>
 
   <script>
-    // 名字和祝福语
     const names = ["黄老师", "小绿", "婷婷", "Lotte"];
     const wishes = [
       "愿你今夜好梦，星星为你守夜。",
@@ -70,7 +83,6 @@
       "一切烦恼都交给星星保管，安心入眠吧。",
       "愿温柔的夜为你披上安宁的被子。"
     ];
-
     const fonts = ["Arial", "Georgia", "Courier New", "Trebuchet MS", "Verdana", "Lucida Console"];
     const gradients = [
       "linear-gradient(135deg, #1e3c72, #2a5298)",
@@ -85,13 +97,11 @@
       return arr[Math.floor(Math.random() * arr.length)];
     }
 
-    // 设置随机背景、字体、文本
     document.body.style.background = getRandom(gradients);
     document.body.style.fontFamily = getRandom(fonts);
     document.getElementById("name").innerText = getRandom(names);
     document.getElementById("wish").innerText = getRandom(wishes);
 
-    // 生成小星星
     for (let i = 0; i < 40; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
