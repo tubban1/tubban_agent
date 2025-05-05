@@ -10,7 +10,6 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      font-family: sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -19,17 +18,9 @@
       transition: background 2s ease;
     }
 
-    h1 {
-      font-size: 3em;
+    h1, p {
       margin: 0.3em;
       animation: fadeIn 2s ease;
-    }
-
-    p {
-      font-size: 1.5em;
-      margin: 0.3em;
-      opacity: 0.85;
-      animation: fadeIn 3s ease;
     }
 
     @keyframes fadeIn {
@@ -54,16 +45,13 @@
 
     /* 手机适配字体 */
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-      p {
-        font-size: 1.2em;
-      }
-      .star {
-        width: 4px;
-        height: 4px;
-      }
+      h1 { font-size: 2em; }
+      p   { font-size: 1.2em; }
+    }
+
+    @media (min-width: 601px) {
+      h1 { font-size: 3em; }
+      p   { font-size: 1.6em; }
     }
   </style>
 </head>
@@ -83,7 +71,6 @@
       "一切烦恼都交给星星保管，安心入眠吧。",
       "愿温柔的夜为你披上安宁的被子。"
     ];
-    const fonts = ["Arial", "Georgia", "Courier New", "Trebuchet MS", "Verdana", "Lucida Console"];
     const gradients = [
       "linear-gradient(135deg, #1e3c72, #2a5298)",
       "linear-gradient(135deg, #0f2027, #203a43, #2c5364)",
@@ -92,16 +79,39 @@
       "linear-gradient(135deg, #000428, #004e92)",
       "linear-gradient(135deg, #232526, #414345)"
     ];
+    const fonts = [
+      "Arial, sans-serif",
+      "Georgia, serif",
+      "'Courier New', monospace",
+      "'Trebuchet MS', sans-serif",
+      "'Comic Sans MS', cursive",
+      "'Microsoft YaHei', sans-serif",
+      "'Noto Sans SC', sans-serif",
+      "'STKaiti', serif"
+    ];
+    const colors = [
+      "#ffffff", "#ffe4e1", "#ffccff", "#f0f8ff", "#e0ffff", "#f8f8ff", "#fffacd", "#c0ebd7"
+    ];
 
     function getRandom(arr) {
       return arr[Math.floor(Math.random() * arr.length)];
     }
 
-    document.body.style.background = getRandom(gradients);
-    document.body.style.fontFamily = getRandom(fonts);
-    document.getElementById("name").innerText = getRandom(names);
-    document.getElementById("wish").innerText = getRandom(wishes);
+    // 设置随机内容
+    const name = getRandom(names);
+    const wish = getRandom(wishes);
+    const bg = getRandom(gradients);
+    const font = getRandom(fonts);
+    const fontColor = getRandom(colors);
 
+    document.body.style.background = bg;
+    document.body.style.fontFamily = font;
+    document.getElementById("name").innerText = name;
+    document.getElementById("wish").innerText = wish;
+    document.getElementById("name").style.color = fontColor;
+    document.getElementById("wish").style.color = fontColor;
+
+    // 生成星星动画
     for (let i = 0; i < 40; i++) {
       const star = document.createElement("div");
       star.classList.add("star");
