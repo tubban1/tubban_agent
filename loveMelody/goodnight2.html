@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>晚安梦境之门</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: radial-gradient(#1e1f26, #0d0e13);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 { font-size: 1.5rem; }
+    .mood-select, .emotion-select {
+      margin: 1rem;
+    }
+    select, button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+    }
+    .portal {
+      margin-top: 2rem;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(#6fffe9, #9f6eff, #6fffe9);
+      animation: spin 6s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .portal-text {
+      text-align: center;
+      font-size: 1.2rem;
+      color: black;
+      font-weight: bold;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .dream-scene, .message-box {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .dream-scene.active, .message-box.active {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <h1>选择你今天的心情</h1>
+  <div class="mood-select">
+    <select id="mood">
+      <option value="happy">开心</option>
+      <option value="tired">疲惫</option>
+      <option value="romantic">想恋爱</option>
+      <option value="lonely">孤单</option>
+      <option value="excited">兴奋</option>
+    </select>
+  </div>
+
+  <div class="portal" onclick="enterDream()">
+    <div class="portal-text">进入梦境之门</div>
+  </div>
+
+  <div class="dream-scene" id="dreamScene"></div>
+
+  <div class="message-box" id="messageBox">
+    <h2>向饶老师留言：</h2>
+    <div class="emotion-select">
+      <select id="emotion">
+        <option value="谢谢你今天的陪伴">感谢</option>
+        <option value="我有点想你了">想念</option>
+        <option value="今天有点委屈，但我还在努力">倾诉</option>
+        <option value="你也早点休息，照顾自己喔">关心</option>
+        <option value="明天见，记得梦里来找我">撒娇</option>
+      </select>
+    </div>
+    <button onclick="sendMessage()">发送</button>
+    <p id="sentMessage" style="margin-top: 1rem;"></p>
+  </div>
+
+  <script>
+    const moodDescriptions = {
+      happy: "你来到了一个彩虹云朵堆积的空中岛屿，笑声在空中荡漾...",
+      tired: "你飘进了一个缓缓流淌的月光湖泊，那里静谧安然...",
+      romantic: "你走入了一座玫瑰花开的玻璃温室，空气中都是心动的香气...",
+      lonely: "你来到了星辰漫布的宇宙角落，一只猫坐在你身边陪你看星星...",
+      excited: "你飞奔在流光飞舞的夜之森林，脚下的每一步都点亮光斑..."
+    };
+
+    function enterDream() {
+      const mood = document.getElementById('mood').value;
+      const scene = document.getElementById('dreamScene');
+      scene.innerHTML = `<h2>梦境：</h2><p>${moodDescriptions[mood]}</p>`;
+      scene.classList.add('active');
+      document.getElementById('messageBox').classList.add('active');
+    }
+
+    function sendMessage() {
+      const emotion = document.getElementById('emotion').value;
+      document.getElementById('sentMessage').textContent = `留言已送出：${emotion}`;
+    }
+  </script>
+</body>
+</html>
