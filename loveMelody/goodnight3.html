@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>梦境晚安动画</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #001f3f, #0074D9);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .highlight {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #FFD700;
+    }
+    .gate, .emotion {
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 10px;
+    }
+    .options button {
+      margin: 0.5rem;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #7FDBFF;
+      color: #111;
+      cursor: pointer;
+    }
+    .options button:hover {
+      background-color: #39CCCC;
+    }
+    #messageBox {
+      margin-top: 1rem;
+    }
+    .audio-player {
+      margin-top: 1rem;
+    }
+    textarea {
+      width: 80%;
+      height: 100px;
+      margin-top: 1rem;
+      border-radius: 5px;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .send-button {
+      margin-top: 1rem;
+      background-color: #FFDC00;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌙 晚安，<span class="highlight" id="name"></span>！</h1>
+  <div id="greeting"></div>
+
+  <div class="gate">
+    <h2>🧠 请选择你今天的心情：</h2>
+    <div class="options" id="moodOptions"></div>
+  </div>
+
+  <div class="gate" id="dreamGate" style="display: none;">
+    <h2>🌌 请选择你的梦境之门：</h2>
+    <div class="options" id="dreamOptions"></div>
+    <h3>🎧 选择一个自然声音背景：</h3>
+    <div class="options" id="soundOptions"></div>
+    <div class="audio-player">
+      <audio id="bgSound" controls loop></audio>
+    </div>
+  </div>
+
+  <div class="emotion" id="emotionBox" style="display: none;">
+    <h2>💬 留言给饶老师：</h2>
+    <div class="options" id="emotionOptions"></div>
+    <textarea id="customMessage" placeholder="输入你此刻的想法..."></textarea><br/>
+    <button class="send-button" id="sendCustom">发送留言</button>
+    <div id="messageBox"></div>
+  </div>
+
+  <script>
+    const names = ["黄老师", "小绿", "婷婷", "Lotte"];
+    const greetings = ["愿你做一个甜甜的梦", "祝你今晚好眠", "星星替我对你说晚安", "梦里有光，心中有爱"];
+    const moods = ["开心", "难过", "焦虑", "放松", "疲惫"];
+    const dreams = ["森林小屋", "星河旅站", "童话城堡", "无人海滩"];
+    const sounds = [ 
+      { label: "漫步", file: "light-foot-steps-in-a-forest-332831.mp3" },
+      { label: "海浪", file: "ocean-beach-waves-332383.mp3" },
+      { label: "屋顶雨", file: "rain-echo-roof-resonance-in-the-woods-335718.mp3" },
+      { label: "森林", file: "spring-forest-nature-332842.mp3" },
+      { label: "水流", file: "water-over-a-brook-with-bird-song48k-332835.mp3" },
+      { label: "随机", file: null }
+    ];
+    const emotions = ["我很想你", "今天还不错，谢谢你", "希望你也睡得好", "梦里见！"];
+
+    const nameEl = document.getElementById("name");
+    const greetingEl = document.getElementById("greeting");
+    const moodOptions = document.getElementById("moodOptions");
+    const dreamGate = document.getElementById("dreamGate");
+    const dreamOptions = document.getElementById("dreamOptions");
+    const soundOptions = document.getElementById("soundOptions");
+    const bgSound = document.getElementById("bgSound");
+    const emotionBox = document.getElementById("emotionBox");
+    const emotionOptions = document.getElementById("emotionOptions");
+    const messageBox = document.getElementById("messageBox");
+    const customMessage = document.getElementById("customMessage");
+    const sendCustom = document.getElementById("sendCustom");
+
+    nameEl.textContent = names[Math.floor(Math.random() * names.length)];
+    greetingEl.textContent = greetings[Math.floor(Math.random() * greetings.length)];
+
+    moods.forEach(mood => {
+      const btn = document.createElement("button");
+      btn.textContent = mood;
+      btn.onclick = () => {
+        dreamGate.style.display = "block";
+      };
+      moodOptions.appendChild(btn);
+    });
+
+    dreams.forEach(dream => {
+      const btn = document.createElement("button");
+      btn.textContent = dream;
+      btn.onclick = () => {
+        emotionBox.style.display = "block";
+      };
+      dreamOptions.appendChild(btn);
+    });
+
+    sounds.forEach(s => {
+      const btn = document.createElement("button");
+      btn.textContent = s.label;
+      btn.onclick = () => {
+        let soundFile = s.file;
+        if (!soundFile) {
+          const random = sounds[Math.floor(Math.random() * (sounds.length - 1))];
+          soundFile = random.file;
+        }
+        bgSound.src = soundFile;
+        bgSound.play();
+      };
+      soundOptions.appendChild(btn);
+    });
+
+    emotions.forEach(em => {
+      const btn = document.createElement("button");
+      btn.textContent = em;
+      btn.onclick = () => {
+        messageBox.textContent = `✅ 留言已发送：「${em}」`;
+        fetch("https://formspree.io/f/xvgaaldl", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({ message: em })
+        });
+      };
+      emotionOptions.appendChild(btn);
+    });
+
+    sendCustom.onclick = () => {
+      const text = customMessage.value.trim();
+      if (text) {
+        messageBox.textContent = `✅ 留言已发送：「${text}」`;
+        fetch("https://formspree.io/f/xvgaaldl", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({ message: text })
+        });
+        customMessage.value = "";
+      }
+    };
+  </script>
+</body>
+</html>
